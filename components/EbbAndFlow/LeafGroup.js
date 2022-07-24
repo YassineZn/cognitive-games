@@ -162,7 +162,13 @@ const LeafGroup = ({ gameBounds, isPaused, setNumberOfCorrectAnswers, setNumberO
   };
 
   return (
-    <motion.div {...handlers} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+    <motion.div
+      {...handlers}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="w-full h-full"
+    >
       <div
         style={{
           transform:

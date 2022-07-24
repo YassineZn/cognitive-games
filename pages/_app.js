@@ -13,7 +13,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/icons/logo.svg" />
+        <title>Yassine Zaanouni</title>
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Layout>
         {/* <Toaster

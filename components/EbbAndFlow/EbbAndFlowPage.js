@@ -18,7 +18,7 @@ const EbbAndFlowPage = () => {
 
   const { time, start, pause, reset, status } = useTimer({
     endTime: 0,
-    initialTime: 60,
+    initialTime: 59,
     timerType: "DECREMENTAL",
   });
 
@@ -87,7 +87,17 @@ const EbbAndFlowPage = () => {
             </Modal>
           )}
         </AnimatePresence>
-
+        {isPlaying && (
+          <button
+            className="bg-black/70  p-2 z-20 absolute top-0 left-0 "
+            onClick={() => {
+              setIsPaused(!isPaused);
+              isPaused ? start() : pause();
+            }}
+          >
+            {isPaused ? "Resume" : "Pause"}
+          </button>
+        )}
         {/* Pause modal */}
         <AnimatePresence>
           {isPaused && (
@@ -105,6 +115,7 @@ const EbbAndFlowPage = () => {
                     onClick={() => {
                       setIsPaused(false);
                       setIsPlaying(false);
+                      reset();
                     }}
                   >
                     Menu
@@ -152,6 +163,7 @@ const EbbAndFlowPage = () => {
               className="text-blue-200/75 text-sm mt-4 mb-6"
             >
               Train your task switching ability by shifting focus between where the leaves point and how they move
+              <span className="text-green-200"> (works with both arrowkeys and gestures on mobile)</span>
             </motion.p>
             <div className="text-xl gap-4 f-ai-c flex-wrap-reverse md:flex-nowrap">
               <motion.button

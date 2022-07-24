@@ -13,7 +13,6 @@ const Header = () => {
   return (
     <header className="main text-center py-4">
       <h1>
-        {" "}
         <Link href="/">Yassine Zaanouni</Link>
       </h1>
       {/* <div ref={navOpenRef} className="main f-ai-c justify-between gap-36">
