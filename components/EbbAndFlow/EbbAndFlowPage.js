@@ -27,18 +27,18 @@ const EbbAndFlowPage = () => {
       new Audio("/games/ebb-and-flow/game-end.mp3").play();
     }
   }, [time]);
-  const disablePageScroll = () => {
-    document.body.style.overflow = "hidden";
-  };
+  // const disablePageScroll = () => {
+  //   document.body.style.overflow = "hidden";
+  // };
 
-  const enablePageScroll = () => {
-    document.body.style.overflow = "auto";
-  };
+  // const enablePageScroll = () => {
+  //   document.body.style.overflow = "auto";
+  // };
 
-  useEffect(() => {
-    if (isPlaying) disablePageScroll();
-    else enablePageScroll();
-  }, [isPlaying]);
+  // useEffect(() => {
+  //   if (isPlaying) disablePageScroll();
+  //   else enablePageScroll();
+  // }, [isPlaying]);
 
   // pausing the game
   const handleKeyDown = (e) => {

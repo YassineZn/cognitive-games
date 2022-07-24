@@ -67,6 +67,7 @@ const LeafGroup = ({ gameBounds, isPaused, setNumberOfCorrectAnswers, setNumberO
   //   listen to arrow keys
   const listeToArrowKeys = (e) => {
     if (!isPaused && ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)) {
+      e.preventDefault();
       if (correctMove === "moving") {
         if (e.key === "ArrowLeft" && direction === "left") {
           goodJob();
