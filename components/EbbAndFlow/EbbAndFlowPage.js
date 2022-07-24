@@ -65,7 +65,7 @@ const EbbAndFlowPage = () => {
     <div className="overflow-hidden text-center  md:mt-20">
       <GameContainer ref={gameContainerRef} className="relative isolate mx-auto">
         <div className="absolute w-full h-full -z-10">
-          <Image src="/games/ebb-and-flow/bg.jpg" alt="bg" layout="fill" />
+          <Image src="/games/ebb-and-flow/bg.webp" alt="bg" layout="fill" />
         </div>
         {/* Instructions modal */}
         <AnimatePresence>
@@ -81,13 +81,13 @@ const EbbAndFlowPage = () => {
                 are pointing down, then press the up arrow key (or swipe up on your phone screen if playing on mobile.)
               </p> */}
               <div className="flex flex-col">
-                <img src="/games/ebb-and-flow/instruction1.png" style={{ objectFit: "contain" }} />
-                <img src="/games/ebb-and-flow/instruction2.png" style={{ objectFit: "contain" }} />
+                <img src="/games/ebb-and-flow/instruction1.webp" style={{ objectFit: "contain" }} />
+                <img src="/games/ebb-and-flow/instruction2.webp" style={{ objectFit: "contain" }} />
               </div>
             </Modal>
           )}
         </AnimatePresence>
-        {isPlaying && (
+        {isPlaying && time > 0 && (
           <button
             className="bg-black/70  p-2 z-20 absolute top-0 left-0 "
             onClick={() => {

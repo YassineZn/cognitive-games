@@ -6,21 +6,21 @@ export default function Home() {
   const card1 = {
     id: 1,
     title: "Ebb and Flow",
-    image: "/games/ebb-and-flow/game-interface.png",
+    image: "/games/ebb-and-flow/game-interface.webp",
     desc: "The objective of Ebb and Flow is to press the corresponding arrow key in either the direction the green leaves are facing, or in the direction the orange leaves are moving.",
     playLink: "/games/ebb-and-flow",
     repoLink: "https://github.com/YassineZn/cognitive-games",
   };
   const card2 = {
     title: "Sorting Visualizer",
-    image: "/games/other-games/sorting-visualizer.png",
+    image: "/games/other-games/sorting-visualizer.webp",
     desc: "Welcome to Sorting Visualizer! I built this application because I wanted to visualize sorting algorithms in action. I hope that you enjoy playing around with this visualization tool just as much as I enjoyed building it.",
     playLink: "https://yassinezn.github.io/Sorting-Visualizer",
     repoLink: "https://github.com/YassineZn/Sorting-Visualizer",
   };
   const card3 = {
     title: "Sorting Visualizer",
-    image: "/games/other-games/virtual-calculator.png",
+    image: "/games/other-games/virtual-calculator.webp",
     desc: "Welcome to Virtual Calculator! build with AI to detetct hand gestures and perform mathematical operations.",
     playLink: "https://virtual-calculator.netlify.app/",
     repoLink: "https://github.com/YassineZn/virtual-calculator",
@@ -28,7 +28,7 @@ export default function Home() {
   };
   const card4 = {
     title: "Snake Game",
-    image: "/games/other-games/snake.png",
+    image: "/games/other-games/snake.webp",
     desc: "Welcome to the most famous game!! The snake game.",
     playLink: "https://yassinezn.github.io/snake/",
     repoLink: "https://github.com/YassineZn/snake",
