@@ -4,6 +4,7 @@ https://cognitive-games.vercel.app/
 ![chrome_fVsjffnc9z](https://user-images.githubusercontent.com/17102478/180660523-287d5ffd-117b-4aca-9e65-2cbb8dcf6b38.png)
 
 ## How To play? Ebb and Flow
+You can play with arrow keys or with swipe gestures if you are on mobile.
 ![chrome_HpCVDt6lCb](https://user-images.githubusercontent.com/17102478/180660535-8b791a1c-3ff9-42ee-9cbc-a297f2fbd118.png)
 
 ## Game Ebb and Flow
