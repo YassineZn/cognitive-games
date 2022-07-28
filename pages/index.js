@@ -59,7 +59,7 @@ export default function Home() {
                 Try me!
               </div>
             )}
-            <GameCard key={i} card={card} />
+            <GameCard card={card} />
           </div>
         ))}
       </div>
