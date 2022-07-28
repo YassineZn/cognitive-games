@@ -53,7 +53,7 @@ export default function Home() {
       <h2 className="mb-3">Recent</h2>
       <div className="f-ai-c flex-wrap gap-4 md:gap-8">
         {recent.map((card, i) => (
-          <div className="relative">
+          <div key={i} className="relative">
             {i === 0 && (
               <div className="bouncy bg-blue-600/10 rounded-lg animate-bounce backdrop-blur-md absolute z-[1] left-1/2 py-2 px-6 ">
                 Try me!
