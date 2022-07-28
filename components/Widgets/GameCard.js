@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const GameCard = ({ card }) => {
   return (
-    <div className="bg-bg-500 w-[22rem] h-[580px] text-center pb-8 rounded-lg overflow-hidden flex flex-col justify-between shadow-xl shadow-slate-700/[0.15]">
+    <div className="bg-bg-500 min-w-[22rem] max-w-[30rem] md:w-[22rem] flex-1 md:h-[580px] h-[620px] text-center pb-8 rounded-lg overflow-hidden flex flex-col justify-between shadow-xl shadow-slate-700/[0.15]">
       <div>
         <div className="relative  mx-auto hover:scale-[1.025] transition-transform duration-300">
           <img src={card.image} alt={card.title} />

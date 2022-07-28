@@ -49,9 +49,9 @@ export default function Home() {
   ];
 
   return (
-    <section className="pb-40">
+    <section className="pb-40 mx-auto">
       <h2 className="mb-3">Recent</h2>
-      <div className="f-ai-c gap-8">
+      <div className="f-ai-c flex-wrap gap-4 md:gap-8">
         {recent.map((card, i) => (
           <div className="relative">
             {i === 0 && (
@@ -66,7 +66,7 @@ export default function Home() {
       <h2 className="mb-3 mt-20">
         Old ones <span className="text-lg">( p5 / native javascript)</span>
       </h2>
-      <div className="f-ai-c gap-8">
+      <div className="f-ai-c flex-wrap gap-4 md:gap-8">
         {old.map((card, i) => (
           <GameCard key={i} card={card} />
         ))}
