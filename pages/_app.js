@@ -17,19 +17,6 @@ function MyApp({ Component, pageProps }) {
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Layout>
-        {/* <Toaster
-          position="top-center"
-          reverseOrder={false}
-          toastOptions={{
-            // Define default options
-            className: "",
-            duration: 1500,
-            style: {
-              background: "#363636",
-              color: "#fff",
-            },
-          }}
-        /> */}
         <Component {...pageProps} />
       </Layout>
     </>

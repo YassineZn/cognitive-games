@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const GameCard = ({ card }) => {
   return (
-    <div className="bg-bg-500 w-80 h-[540px] text-center pb-6 rounded-lg overflow-hidden flex flex-col justify-between">
+    <div className="bg-bg-500 w-[22rem] h-[580px] text-center pb-8 rounded-lg overflow-hidden flex flex-col justify-between shadow-xl shadow-slate-700/[0.15]">
       <div>
-        <div className="relative  mx-auto">
+        <div className="relative  mx-auto hover:scale-[1.025] transition-transform duration-300">
           <img src={card.image} alt={card.title} />
         </div>
         <div className="py-4 px-6">
@@ -18,12 +18,12 @@ const GameCard = ({ card }) => {
           </div>
         </div>
       </div>
-      <div className="f-ai-c justify-center gap-4 mt-auto mb-0">
+      <div className="f-ai-c justify-center font-semibold gap-4 mt-auto mb-0">
         <a
           href={`${card.playLink}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-orange-600 py-1 px-6 rounded-sm transition-all hover:bg-orange-500 active:scale-105"
+          className="bg-orange-600 py-3 px-10 rounded-[4px] transition-all hover:bg-orange-500 active:scale-105"
         >
           Play
         </a>
@@ -31,7 +31,7 @@ const GameCard = ({ card }) => {
           href={`${card.repoLink}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="border border-orange-600 py-1 px-6 rounded-sm transition-all hover:border-orange-500 active:scale-105"
+          className="border border-orange-600 py-3 px-10 rounded-[4px] transition-all hover:border-orange-500 active:scale-105"
         >
           Github
         </a>
