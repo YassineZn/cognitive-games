@@ -7,12 +7,7 @@ import { BsMoonStarsFill, BsFillTriangleFill, BsFillStarFill, BsApple, BsCaretRi
 const TheGame = ({ isPaused, setNumberOfCorrectAnswers, numberOfMoves, setNumberOfMoves }) => {
   const currentImageRef = useRef();
   const pastImageRef = useRef();
-  const [images, setImages] = useState([
-    <BsFillStarFill key={0} />,
-    <BsMoonStarsFill key={1} />,
-    <BsApple key={2} />,
-    <BsFillTriangleFill key={3} />,
-  ]);
+  const [images, setImages] = useState([]);
   const [pastImageIndex, setPastImageIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   // audio
@@ -25,6 +20,12 @@ const TheGame = ({ isPaused, setNumberOfCorrectAnswers, numberOfMoves, setNumber
   });
 
   useEffect(() => {
+    setImages([
+      <BsFillStarFill key={0} />,
+      <BsMoonStarsFill key={1} />,
+      <BsApple key={2} />,
+      <BsFillTriangleFill key={3} />,
+    ]);
     setAudio(new Audio("/games/ebb-and-flow/game-start.mp3"));
     setPastImageIndex(randomNumber(0, 3));
     setCurrentImageIndex(randomNumber(0, 3));
@@ -39,7 +40,7 @@ const TheGame = ({ isPaused, setNumberOfCorrectAnswers, numberOfMoves, setNumber
 
   //   listen to arrow keys
   const listeToArrowKeys = (e) => {
-    if (!isPaused && ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)) {
+    if (!isPaused && ["ArrowLeft", "ArrowRight"].includes(e.key)) {
       e.preventDefault();
       currentImageRef.current.classList.add("animate");
       pastImageRef.current.classList.add("animate2");
@@ -51,7 +52,7 @@ const TheGame = ({ isPaused, setNumberOfCorrectAnswers, numberOfMoves, setNumber
     }
   };
   const listenToSwipe = (dir) => {
-    if (!isPaused) {
+    if (!isPaused && ["left", "right"].includes(dir)) {
       currentImageRef.current.classList.add("animate");
       pastImageRef.current.classList.add("animate2");
       if (currentImageIndex === pastImageIndex && dir === "right") {
