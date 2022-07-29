@@ -30,7 +30,7 @@ export default function Home() {
       repoLink: "https://github.com/YassineZn/Sorting-Visualizer",
     },
     {
-      title: "Sorting Visualizer",
+      title: "Virtual Calculator",
       image: "/games/other-games/virtual-calculator.webp",
       desc: "Welcome to Virtual Calculator! build with AI to detetct hand gestures and perform mathematical operations.",
       playLink: "https://virtual-calculator.netlify.app/",
@@ -59,7 +59,7 @@ export default function Home() {
                 Try me!
               </div>
             )}
-            <GameCard card={card} />
+            <GameCard card={card} isThisPageLink={true} />
           </div>
         ))}
       </div>

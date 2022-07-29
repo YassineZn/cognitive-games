@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const GameCard = ({ card }) => {
+const GameCard = ({ card, isThisPageLink }) => {
   return (
     <div className="bg-bg-500 min-w-[22rem] max-w-[30rem] md:w-[22rem] flex-1 md:h-[580px] h-[620px] text-center pb-8 rounded-lg overflow-hidden flex flex-col justify-between shadow-xl shadow-slate-700/[0.15]">
       <div>
@@ -19,14 +19,22 @@ const GameCard = ({ card }) => {
         </div>
       </div>
       <div className="f-ai-c justify-center font-semibold gap-4 mt-auto mb-0">
-        <a
-          href={`${card.playLink}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-orange-600 py-3 px-10 rounded-[4px] transition-all hover:bg-orange-500 active:scale-105"
-        >
-          Play
-        </a>
+        {isThisPageLink ? (
+          <Link href={`${card.playLink}`}>
+            <a className="bg-orange-600 py-3 px-10 rounded-[4px] transition-all hover:bg-orange-500 active:scale-105">
+              Play
+            </a>
+          </Link>
+        ) : (
+          <a
+            href={`${card.playLink}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange-600 py-3 px-10 rounded-[4px] transition-all hover:bg-orange-500 active:scale-105"
+          >
+            Play
+          </a>
+        )}
         <a
           href={`${card.repoLink}`}
           target="_blank"
